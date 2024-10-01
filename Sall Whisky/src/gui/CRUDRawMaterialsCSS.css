@@ -1,0 +1,11 @@
+
+.combobox {
+    -fx-font-size: 11.3px;
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+}
+
+.root {
+    -fx-font-family: "Century Gothic";
+    -fx-font-weight: bold;
+}

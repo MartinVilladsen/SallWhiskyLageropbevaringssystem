@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.guicontrollers.CreateSupplierViewController">
+   <children>
+      <Label layoutX="50.0" layoutY="184.0" text="Navn">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="50.0" layoutY="223.0" prefWidth="47.0" text="Adresse">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="50.0" layoutY="262.0" text="Land">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="50.0" layoutY="305.0" text="VAT_id">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txfName" layoutX="128.0" layoutY="180.0" prefHeight="25.0" prefWidth="202.0" promptText="Lars Larsen">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txfAddress" layoutX="128.0" layoutY="219.0" prefHeight="25.0" prefWidth="202.0" promptText="Julsøvej 130, 8600 Silkeborg">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txfCountry" layoutX="128.0" layoutY="258.0" prefHeight="25.0" prefWidth="202.0" promptText="Danmark">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txfVatId" layoutX="128.0" layoutY="301.0" prefHeight="25.0" prefWidth="202.0" promptText="13590400">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <Label layoutX="50.0" layoutY="143.0" text="Leverandør">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnCreateSupplier" layoutX="130.0" layoutY="350.0" mnemonicParsing="false" onAction="#btnCreateSupplierOnAction" prefHeight="25.0" prefWidth="200.0" text="Opret leverandør">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Button>
+      <ListView fx:id="lvwGrainSuppliers" layoutX="418.0" layoutY="151.0" prefHeight="228.0" prefWidth="200.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css" />
+      <ListView fx:id="lvwCaskSuppliers" layoutX="741.0" layoutY="151.0" prefHeight="228.0" prefWidth="200.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css" />
+      <Label layoutX="418.0" layoutY="121.0" text="Kornleverandør">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="741.0" layoutY="121.0" text="Fadleverandør">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <ComboBox fx:id="cbbSupplier" layoutX="128.0" layoutY="139.0" prefHeight="25.0" prefWidth="202.0" styleClass="combobox" stylesheets="@../CRUDRawMaterialsCSS.css" />
+      <Button fx:id="btnCRUDCask" layoutX="167.0" mnemonicParsing="false" onAction="#btnCrudCaskOnAction" prefHeight="34.0" prefWidth="167.0" text="Administrer fade">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnCRUDStorage" layoutX="334.0" mnemonicParsing="false" onAction="#btnCrudStorageOnAction" prefHeight="34.0" prefWidth="167.0" text="Administrer lager">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnDestillateAndFillOnCask" layoutX="501.0" mnemonicParsing="false" onAction="#btnDestillateAndFillOnCaskOnAction" prefHeight="34.0" prefWidth="167.0" text="Destillater og påfyldninger">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnCRUDRawMaterial" layoutX="668.0" mnemonicParsing="false" onAction="#btnRawMaterialOnAction" prefHeight="34.0" prefWidth="167.0" text="Administrer råvarer">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnCRUDSupplier" disable="true" layoutX="835.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="165.0" text="Administrer leverandører">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnStartside" mnemonicParsing="false" onAction="#btnStartSideOnAction" prefHeight="34.0" prefWidth="167.0" text="Startside">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

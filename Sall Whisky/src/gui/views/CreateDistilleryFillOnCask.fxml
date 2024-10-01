@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.guicontrollers.CRUDDistilleryAndFillController">
+   <children>
+      <ListView fx:id="lvwAvailableCasks" layoutX="472.0" layoutY="325.0" prefHeight="200.0" prefWidth="450.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css" />
+      <ListView fx:id="lvwDistillates" layoutX="472.0" layoutY="97.0" prefHeight="200.0" prefWidth="450.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css" />
+      <Button fx:id="btnFillOnCask" layoutX="623.0" layoutY="576.0" mnemonicParsing="false" onAction="#btnFillOnCaskOnAction" prefHeight="25.0" prefWidth="150.0" text="Påfyld destillat">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="663.0" layoutY="298.0" prefHeight="25.0" text="Ledige fade">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="669.0" layoutY="70.0" prefHeight="25.0" text="Destillater">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txfAmountToPutOnCaskInLiters" layoutX="623.0" layoutY="538.0" prefHeight="25.0" prefWidth="150.0" promptText="Antal Liter">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txfNewMakeNo" layoutX="184.0" layoutY="70.0" prefHeight="25.0" prefWidth="200.0">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txfDistillationTime" layoutX="184.0" layoutY="230.0" prefHeight="25.0" prefWidth="200.0">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txfAmountOfDistillateInLiters" layoutX="184.0" layoutY="310.0" prefHeight="25.0" prefWidth="200.0">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txfSmokingMaterial" layoutX="184.0" layoutY="350.0" prefHeight="25.0" prefWidth="200.0">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txfAlcoholpercentage" layoutX="184.0" layoutY="390.0" prefHeight="25.0" prefWidth="200.0">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <Label layoutX="45.0" layoutY="70.0" prefHeight="25.0" text="New Make Nr">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="42.0" layoutY="110.0" prefHeight="25.0" text="Vælg Maltbatch">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="270.0" prefHeight="25.0" text="Medarbejder">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="230.0" prefHeight="25.0" text="Destilleringstid (Timer)">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="310.0" prefHeight="25.0" text="Væskemængde (Liter)">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="350.0" prefHeight="25.0" text="Rygemateriale">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="45.0" layoutY="390.0" prefHeight="25.0" text="Alkoholprocent (%)">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnCreateDistillate" layoutX="184.0" layoutY="565.0" mnemonicParsing="false" onAction="#btnCreateDistillateOnAction" prefHeight="47.0" prefWidth="200.0" text="Opret Destillat" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnCRUDCask" layoutX="167.0" mnemonicParsing="false" onAction="#btnCrudCaskOnAction" prefHeight="34.0" prefWidth="167.0" text="Administrer fade">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnCRUDStorage" layoutX="334.0" mnemonicParsing="false" onAction="#btnCrudStorageOnAction" prefHeight="34.0" prefWidth="167.0" text="Administrer lager">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnDestillateAndFillOnCask" disable="true" layoutX="501.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="167.0" text="Destillater og påfyldninger">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnCRUDRawMaterial" layoutX="668.0" mnemonicParsing="false" onAction="#btnRawMaterialOnAction" prefHeight="34.0" prefWidth="167.0" text="Administrer råvarer">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnCRUDSupplier" layoutX="835.0" mnemonicParsing="false" onAction="#btnSupplierOnAction" prefHeight="34.0" prefWidth="165.0" text="Administrer leverandører">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="btnStartside" mnemonicParsing="false" onAction="#btnStartSideOnAction" prefHeight="34.0" prefWidth="167.0" text="Startside">
+         <font>
+            <Font name="Century Gothic Bold" size="11.0" />
+         </font></Button>
+      <ListView fx:id="lvwMaltbatches" layoutX="184.0" layoutY="110.0" prefHeight="105.0" prefWidth="200.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css" />
+      <TextArea fx:id="txaDescription" layoutX="184.0" layoutY="430.0" prefHeight="120.0" prefWidth="200.0">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextArea>
+      <Label layoutX="45.0" layoutY="430.0" prefHeight="25.0" text="Beskrivelse">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txfEmployee" layoutX="182.0" layoutY="270.0" prefHeight="25.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>

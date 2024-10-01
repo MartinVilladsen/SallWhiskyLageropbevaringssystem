@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.guicontrollers.CreateWhiskyViewController">
+   <children>
+      <Label layoutX="471.0" layoutY="420.0" prefHeight="25.0" text="Flaskestr. i cl">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="23.0" layoutY="58.0" text="Fade modnet over 3 år">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Label layoutX="801.0" layoutY="58.0" text="Whiskyen består af:">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="amountOfFillCltxf" layoutX="177.0" layoutY="460.0" prefHeight="25.0" prefWidth="150.0" promptText="Liter">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <Label layoutX="23.0" layoutY="460.0" prefHeight="25.0" text="Mængde til påhældning">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <ListView fx:id="lvwWhiskybatch" layoutX="473.0" layoutY="85.0" prefHeight="240.0" prefWidth="240.0" />
+      <Label layoutX="471.0" layoutY="380.0" prefHeight="25.0" text="Fortyndelse">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txfWaterForDilution" layoutX="563.0" layoutY="380.0" prefHeight="25.0" prefWidth="150.0" promptText="Liter">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <Button fx:id="btnCreateWhisky" disable="true" layoutX="757.0" layoutY="535.0" mnemonicParsing="false" onAction="#btnCreateWhiskyOnAction" prefHeight="50.0" prefWidth="200.0" text="Opret whisky">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Button>
+      <ComboBox fx:id="cbbBottleSizeInCl" layoutX="563.0" layoutY="420.0" prefHeight="25.0" prefWidth="150.0" styleClass="combobox" stylesheets="@../CRUDRawMaterialsCSS.css" />
+      <Label layoutX="556.0" layoutY="58.0" text="Whiskybatch">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <Button fx:id="btnRegisterAlcoholpercentage" layoutX="177.0" layoutY="547.0" mnemonicParsing="false" onAction="#btnRegisterAlcoholpercentageOnAction" prefHeight="25.0" prefWidth="150.0" text="Tilføj til whiskybatch">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="txfAlcoholPercentage" layoutX="177.0" layoutY="500.0" prefHeight="25.0" prefWidth="150.0">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <Label layoutX="23.0" layoutY="500.0" prefHeight="25.0" text="Alkoholprocent">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="txfWhiskyName" layoutX="788.0" layoutY="340.0" prefHeight="25.0" prefWidth="189.0">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextField>
+      <Label layoutX="737.0" layoutY="340.0" prefHeight="25.0" text="Navn">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Label>
+      <TextArea fx:id="txaContentOfWhisky" editable="false" layoutX="737.0" layoutY="85.0" prefHeight="240.0" prefWidth="240.0" />
+      <TableView fx:id="tvwRipeCasks" layoutX="23.0" layoutY="85.0" prefHeight="363.0" prefWidth="427.0" styleClass="root" stylesheets="@../CRUDRawMaterialsCSS.css">
+        <columns>
+          <TableColumn fx:id="tbcCaskID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tbcAlcoholPercentage" prefWidth="75.0" text="Alk %" />
+            <TableColumn fx:id="tbcAge" prefWidth="172.0" text="Alder" />
+            <TableColumn fx:id="tbcTotalLitersOfFills" prefWidth="105.0" text="Liter af whisky" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnCalcNumberOfBottles" layoutX="471.0" layoutY="460.0" mnemonicParsing="false" onAction="#btnCalcNumberOfBottlesOnAction" prefHeight="25.0" text="Beregn antal flasker">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></Button>
+      <TextArea fx:id="txaDescriptionOfWhisky" layoutX="737.0" layoutY="380.0" prefHeight="113.0" prefWidth="240.0" promptText="Beskrivelse af whisky">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font></TextArea>
+      <Label fx:id="lblTypeOfWhisky" alignment="CENTER" layoutX="563.0" layoutY="340.0" prefHeight="25.0" prefWidth="150.0" text="ingen whiskybatch fundet" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAmountOfBottles" alignment="CENTER" layoutX="612.0" layoutY="460.0" prefHeight="25.0" prefWidth="100.0" text="0" textAlignment="CENTER">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="471.0" layoutY="340.0" prefHeight="25.0" text="Whiskytype">
+         <font>
+            <Font name="Century Gothic Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
